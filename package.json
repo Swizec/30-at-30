@@ -8,7 +8,9 @@
     "gatsby": "^1.9.73",
     "gatsby-link": "^1.6.22",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "react-bootstrap": "^0.31.3"
+    "react-bootstrap": "^0.31.3",
+    "react-countdown-now": "^1.2.0",
+    "react-instagram-embed": "^1.3.2"
   },
   "keywords": [
     "gatsby"
@@ -19,8 +21,8 @@
     "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "deploy": "yarn build && scp -r public/* swizec@swizec.webfactional.com:~/webapps/swizec_30/"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "yarn build && scp -r public/* swizec@swizec.webfactional.com:~/webapps/swizec_30/"
   },
   "devDependencies": {
     "prettier": "^1.7.4"

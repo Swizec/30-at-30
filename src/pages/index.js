@@ -14,6 +14,10 @@ const IndexPage = () => (
     <div>
         <div className="bg-white-dark padding-small-top" />
         <Content.Header />
+        <Content.Intro />
+        <Content.What />
+        <Content.Buy />
+        <Content.Footer />
     </div>
 );
 
