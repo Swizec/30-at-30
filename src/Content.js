@@ -162,13 +162,13 @@ export const Footer = () => (
             >
                 <ShareButtons.TwitterShareButton
                     via="swizec"
-                    title="Learn everything @swizec has to teach about React, ES6+, D3 and others for just $30"
+                    title="Sweet! @swizec is giving away everything he knows about React, ES6+, D3 and others for just $30"
                     url="https://swizec.com/30"
                 >
                     <TwitterIcon size={32} round={true} />
                 </ShareButtons.TwitterShareButton>
                 <ShareButtons.FacebookShareButton
-                    title="Learn everything @swizec has to teach about React, ES6+, D3 and others for just $30"
+                    title="Sweet! @swizec is giving away everything he knows about React, ES6+, D3 and others for just $30"
                     url="https://swizec.com/30"
                 >
                     <FacebookIcon size={32} round={true} />

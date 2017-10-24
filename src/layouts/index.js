@@ -23,15 +23,18 @@ const TemplateWrapper = ({ children }) => (
             />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-            <meta property="og:url" content="https://es6cheatsheet.com" />
-            <meta property="og:title" content="Interactive ES6 cheatsheet" />
+            <meta property="og:url" content="https://swizec.com/30" />
+            <meta
+                property="og:title"
+                content="SWIZ IS TURNING 30 SO EVERYTHING IS $30"
+            />
             <meta
                 property="og:image"
-                content="https://es6cheatsheet.com/cover.png"
+                content="https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/e35/22500001_137654163533198_4910693116064825344_n.jpg"
             />
             <meta
                 property="og:description"
-                content="This is an interactive ES6 cheatsheet. 9 sections, 31 runnable code samples."
+                content="Get everything Swiz has ever made. Learn React, Redux, MobX, D3v4, ES6+ and more for $30 on his birthday. 1 day only."
             />
 
             <meta name="twitter:card" content="summary" />
@@ -40,11 +43,11 @@ const TemplateWrapper = ({ children }) => (
             <meta name="twitter:title" content="Interactive ES6 cheatsheet" />
             <meta
                 name="twitter:image"
-                content="https://es6cheatsheet.com/cover.png"
+                content="https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/e35/22500001_137654163533198_4910693116064825344_n.jpg"
             />
             <meta
                 name="twitter:description"
-                content="This is an interactive ES6 cheatsheet. 9 sections, 31 runnable code samples."
+                content="Get everything Swiz has ever made. Learn React, Redux, MobX, D3v4, ES6+ and more for $30 on his birthday. 1 day only."
             />
         </Helmet>
         {children()}
