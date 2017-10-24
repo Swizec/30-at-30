@@ -2,11 +2,16 @@ import React from "react";
 import { Row, Col as Column, Image } from "react-bootstrap";
 import InstagramEmbed from "react-instagram-embed";
 import Countdown from "react-countdown-now";
+import { ShareButtons, ShareCounts, generateShareIcon } from "react-share";
 
 import Section, { GreenSection, LowSection } from "./components/Section";
 import { MiddleColumn } from "./components/Columns";
+import Testimonial from "./components/Testimonials";
 
 import Signature from "./img/signature.gif";
+
+const TwitterIcon = generateShareIcon("twitter");
+const FacebookIcon = generateShareIcon("facebook");
 
 export const Header = () => (
     <header className="text-left container">
@@ -35,11 +40,12 @@ export const Intro = () => (
                 at StubHub. Going to be a video course soon.
             </p>
             <p>
-                Over the years I've created a lot of things to help people
-                become better engineers, mostly frontend. I've{" "}
-                <i>published books</i>, launched <i>courses</i>, held{" "}
-                <i>workshops</i>, written <i>articles</i>, made <i>videos</i>.
+                Over the years I've <b>helped over 10,000 engineers</b> improve
+                their craft, mostly frontend. I've <i>published books</i>,
+                launched <i>courses</i>, held <i>workshops</i>, written{" "}
+                <i>articles</i>, made <i>videos</i>.
             </p>
+            <p />
             <p className="lead">
                 <b>Today I want you to have it all for just $30</b>
             </p>
@@ -52,32 +58,47 @@ export const What = () => (
         <MiddleColumn>
             <ul>
                 <li>
-                    <b>Why Programmers Work at Night</b> my wildly popular still
-                    unfinished book about burnout, work habits, and being an
-                    engineer.
+                    <b>
+                        <a href="https://nightowlsbook.com">
+                            Why Programmers Work at Night
+                        </a>
+                    </b>{" "}
+                    my wildly popular still unfinished book about burnout, work
+                    habits, and being an engineer.
                 </li>
                 <li>
-                    <b>React + D3v4</b>, my book about building data
-                    visualizations with React and modern D3. Includes chapters
-                    on both Redux and MobX.
+                    <b>
+                        <a href="https://swizec.com/reactd3js">React + D3v4</a>
+                    </b>, my book about building data visualizations with React
+                    and modern D3. Includes chapters on both Redux and MobX.
                 </li>
                 <li>
-                    <b>React + D3v4 course</b>, same as above except with
-                    runnable code playgrounds so you can try it all out while
-                    you read. No leaving the browser, no context switching.
+                    <b>
+                        <a href="https://swizec.com/reactd3js">
+                            React + D3v4 course
+                        </a>
+                    </b>, same as above except with runnable code playgrounds so
+                    you can try it all out while you read. No leaving the
+                    browser, no context switching.
                 </li>
                 <li>
-                    Interactive <b>ES6+ cheatsheet</b> so you can learn modern
-                    JavaScript with runnable examples comparing the old way to
-                    the new way. New updates coming this week.{" "}
+                    Interactive{" "}
+                    <b>
+                        <a href="https://es6cheatsheet.com">ES6+ cheatsheet</a>
+                    </b>{" "}
+                    so you can learn modern JavaScript with runnable examples
+                    comparing the old way to the new way. New updates coming
+                    this week.{" "}
                 </li>
                 <li>
                     <b>Intro to React and Redux video course</b>, an upcoming
-                    video course based on my 2-day workshop at StubHub. Learn
-                    React, Redux, styled components, React Router, talkign to
-                    remote APIs, server-side rendering, and some theory on app
-                    architecture. The code and base materials are ready, videos
-                    in the works.
+                    video course based on my{" "}
+                    <a href="https://swizec.github.io/intro-to-react-workshop/">
+                        2-day workshop at StubHub
+                    </a>. Learn React, Redux, styled components, React Router,
+                    talking to remote APIs, server-side rendering, and some
+                    theory on app architecture. The code and base materials are
+                    ready, videos in the works.
                 </li>
                 <li>
                     <b>30min chat with me</b> – we schedule a call, you ask me
@@ -100,25 +121,30 @@ export const What = () => (
 export const Buy = () => (
     <GreenSection className="padding-big-top padding-medium-bottom text-center">
         <MiddleColumn>
+            <p style={{ marginBottom: "0px" }}>30 at 30 sale ends in</p>
+
+            <h3 style={{ marginTop: "0px" }}>
+                <big>
+                    <Countdown
+                        date={new Date("2017-10-25 23:59 PDT")}
+                        zeroPadLength={2}
+                        daysInHours={true}
+                    />
+                </big>
+            </h3>
             <p>
-                <h3>
-                    <big>
-                        <Countdown
-                            date={new Date("2017-10-25 23:59 PDT")}
-                            zeroPadLength={2}
-                            daysInHours={true}
-                        />
-                    </big>
-                </h3>
+                <a
+                    className="gumroad-button"
+                    href="https://gum.co/RZoRb?wanted=true"
+                    target="_blank"
+                    data-gumroad-single-product="true"
+                >
+                    Buy now for $30
+                </a>
             </p>
-            <a
-                className="gumroad-button"
-                href="https://gum.co/RZoRb?wanted=true"
-                target="_blank"
-                data-gumroad-single-product="true"
-            >
-                Buy now for $30
-            </a>
+        </MiddleColumn>
+        <MiddleColumn md={8} className="padding-small-top">
+            <Testimonial which="timothy" />
         </MiddleColumn>
     </GreenSection>
 );
@@ -126,9 +152,28 @@ export const Buy = () => (
 export const Footer = () => (
     <LowSection>
         <MiddleColumn>
-            <p>
-                Know someone who needs help? <a href="#">Share</a>
-            </p>
+            <p>Know someone who needs help? Share 👇</p>
+            <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center"
+                }}
+            >
+                <ShareButtons.TwitterShareButton
+                    via="swizec"
+                    title="Learn everything @swizec has to teach about React, ES6+, D3 and others for just $30"
+                    url="https://swizec.com/30"
+                >
+                    <TwitterIcon size={32} round={true} />
+                </ShareButtons.TwitterShareButton>
+                <ShareButtons.FacebookShareButton
+                    title="Learn everything @swizec has to teach about React, ES6+, D3 and others for just $30"
+                    url="https://swizec.com/30"
+                >
+                    <FacebookIcon size={32} round={true} />
+                </ShareButtons.FacebookShareButton>
+            </div>
             <p>
                 Cheers,<br />
                 ~Swizec<br />
