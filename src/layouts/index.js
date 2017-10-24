@@ -39,7 +39,7 @@ const TemplateWrapper = ({ children }) => (
             />
             <meta
                 property="og:image"
-                content="https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/e35/22500001_137654163533198_4910693116064825344_n.jpg"
+                content="https://swizec.com/30/cover.jpg"
             />
             <meta
                 property="og:description"
@@ -59,7 +59,7 @@ const TemplateWrapper = ({ children }) => (
             />
             <meta
                 name="twitter:image"
-                content="https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/e35/22500001_137654163533198_4910693116064825344_n.jpg"
+                content="https://swizec.com/30/cover.jpg"
             />
 
             <GAInitiailizer />
