@@ -62,6 +62,8 @@ const TemplateWrapper = ({ children }) => (
                 content="https://swizec.com/30/cover.jpg"
             />
 
+            <title>SWIZ IS TURNING 30 SO EVERYTHING IS $30</title>
+
             <GAInitiailizer />
         </Helmet>
         {children()}
