@@ -126,7 +126,7 @@ export const Buy = () => (
             <h3 style={{ marginTop: "0px" }}>
                 <big>
                     <Countdown
-                        date={new Date("2017-10-25 23:59 PDT")}
+                        date={new Date("2017-10-26T06:59:00.000Z")}
                         zeroPadLength={2}
                         daysInHours={true}
                     />
